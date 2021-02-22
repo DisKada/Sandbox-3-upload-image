@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="card shadow-lg p-5">
+        <Upload />
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+import Upload from './components/Upload.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Upload
+  }
+}
+</script>
 
 <style>
 #app {
@@ -15,18 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
+  min-height: 80vh;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.container {
+  height: 80vh;
 }
 </style>
